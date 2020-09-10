@@ -1,0 +1,44 @@
+{
+    "test.py 4": {
+        "file": "test.py",
+        "name": "testClassA",
+        "lineno": 4,
+        "args": "{}"
+    },
+    "test.py 12": {
+        "file": "test.py",
+        "name": "testClassB",
+        "lineno": 12,
+        "args": "{}"
+    },
+    "test.py 5": {
+        "file": "test.py",
+        "name": "__init__",
+        "lineno": 5,
+        "args": "{'self': <__main__.testClassA object at 0x7f85ae88e588>, 'a': 1, 'c': False}"
+    },
+    "test.py 13": {
+        "file": "test.py",
+        "name": "__init__",
+        "lineno": 13,
+        "args": "{'self': <__main__.testClassB object at 0x7f85ae8214a8>, 'a': '1', 'c': True}"
+    },
+    "test.py 7": {
+        "file": "test.py",
+        "name": "get",
+        "lineno": 7,
+        "args": "{'self': <__main__.testClassA object at 0x7f85ae88e588>, 'b': 2}"
+    },
+    "test.py 15": {
+        "file": "test.py",
+        "name": "get",
+        "lineno": 15,
+        "args": "{'self': <__main__.testClassB object at 0x7f85ae8214a8>, 'b': '2'}"
+    },
+    "test.py 18": {
+        "file": "test.py",
+        "name": "testFunction",
+        "lineno": 18,
+        "args": "{'q': '57', 'v': 5}"
+    }
+}
