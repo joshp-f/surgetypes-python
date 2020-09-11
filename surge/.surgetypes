@@ -1,44 +1,44 @@
 {
-    "test.py 5": {
+    "test.py 7": {
         "file": "test.py",
         "name": "testClassA",
-        "lineno": 5,
+        "lineno": 7,
         "args": "{}"
     },
-    "test.py 13": {
+    "test.py 15": {
         "file": "test.py",
         "name": "testClassB",
-        "lineno": 13,
+        "lineno": 15,
         "args": "{}"
-    },
-    "test.py 6": {
-        "file": "test.py",
-        "name": "__init__",
-        "lineno": 6,
-        "args": "{'self': <__main__.testClassA object at 0x7f57d1a64710>, 'a': 1, 'c': False}"
-    },
-    "test.py 14": {
-        "file": "test.py",
-        "name": "__init__",
-        "lineno": 14,
-        "args": "{'self': <__main__.testClassB object at 0x7f57d1a55fd0>, 'a': '1', 'c': True}"
     },
     "test.py 8": {
         "file": "test.py",
-        "name": "get",
+        "name": "__init__",
         "lineno": 8,
-        "args": "{'self': <__main__.testClassA object at 0x7f57d1a64710>, 'b': 2}"
+        "args": "{'self': <__main__.testClassA object at 0x7f98b026e710>, 'a': 1, 'c': False}"
     },
     "test.py 16": {
         "file": "test.py",
-        "name": "get",
+        "name": "__init__",
         "lineno": 16,
-        "args": "{'self': <__main__.testClassB object at 0x7f57d1a55fd0>, 'b': '2'}"
+        "args": "{'self': <__main__.testClassB object at 0x7f98b00ff7f0>, 'a': '1', 'c': True}"
     },
-    "test.py 19": {
+    "test.py 10": {
+        "file": "test.py",
+        "name": "get",
+        "lineno": 10,
+        "args": "{'self': <__main__.testClassA object at 0x7f98b026e710>, 'b': 2}"
+    },
+    "test.py 18": {
+        "file": "test.py",
+        "name": "get",
+        "lineno": 18,
+        "args": "{'self': <__main__.testClassB object at 0x7f98b00ff7f0>, 'b': '2'}"
+    },
+    "test.py 21": {
         "file": "test.py",
         "name": "testFunction",
-        "lineno": 19,
+        "lineno": 21,
         "args": "{'q': '57', 'v': 5}"
     }
 }

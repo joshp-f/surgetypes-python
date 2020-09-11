@@ -5,8 +5,8 @@ import setuptools
 #     long_description = fh.read()
 
 setuptools.setup(
-    name="surgetypes-python", # Replace with your own username
-    version="0.0.1",
+    name="surgetypes", # Replace with your own username
+    version="0.0.4",
     author="Joshua p-f",
     author_email="jporrittfraser@gmail.com",
     description="Automated type checking",

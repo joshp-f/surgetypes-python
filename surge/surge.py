@@ -1,6 +1,8 @@
 from functools import wraps
 import json
 import inspect
+import opcode
+import os, pathlib
 log = {}
 # surge_file =  open('.surgetypes','w+')
 def saveSurgeFile():
@@ -26,13 +28,14 @@ BLACKLIST = [
 ]
 # https://explog.in/notes/settrace.html
 def trace():
-  import opcode
   def show_trace(frame, event, arg):
       # frame.f_trace_opcodes = True
       # offset = frame.f_lasti
       if event != "call": return
+      if os.path.isabs(frame.f_code.co_filename): return
+
       code = frame.f_code
-      args = {name:frame.f_locals.get("name") for name in code.co_varnames}
+      args = {name:frame.f_locals.get(name) for name in code.co_varnames}
       log[f"{code.co_filename} {code.co_firstlineno}" ] = {
 
         "file": code.co_filename,

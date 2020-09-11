@@ -2,6 +2,8 @@
 import surge
 surge.trace()
 import sys
+import os
+os.path.isabs("ds")
 class testClassA:
   def __init__(self,a,c=True):
     pass
