@@ -1,6 +1,7 @@
 # @surge.wrap
 import surge
 surge.trace()
+import sys
 class testClassA:
   def __init__(self,a,c=True):
     pass

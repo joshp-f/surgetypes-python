@@ -32,7 +32,7 @@ def trace():
       # offset = frame.f_lasti
       if event != "call": return
       code = frame.f_code
-      args = {name:frame.f_locals[name] for name in code.co_varnames}
+      args = {name:frame.f_locals.get("name") for name in code.co_varnames}
       log[f"{code.co_filename} {code.co_firstlineno}" ] = {
 
         "file": code.co_filename,
