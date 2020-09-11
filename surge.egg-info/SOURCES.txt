@@ -1,8 +1,0 @@
-setup.py
-surge/__init__.py
-surge/surge.py
-surge/test.py
-surge.egg-info/PKG-INFO
-surge.egg-info/SOURCES.txt
-surge.egg-info/dependency_links.txt
-surge.egg-info/top_level.txt

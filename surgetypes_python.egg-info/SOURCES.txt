@@ -1,9 +1,0 @@
-README.md
-setup.py
-surge/__init__.py
-surge/surge.py
-surge/test.py
-surgetypes_python.egg-info/PKG-INFO
-surgetypes_python.egg-info/SOURCES.txt
-surgetypes_python.egg-info/dependency_links.txt
-surgetypes_python.egg-info/top_level.txt
