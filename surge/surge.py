@@ -29,8 +29,7 @@ BLACKLIST = [
 # https://explog.in/notes/settrace.html
 def trace():
   def show_trace(frame, event, arg):
-      # frame.f_trace_opcodes = True
-      # offset = frame.f_lasti
+    try:
       if event != "call": return
       if os.path.isabs(frame.f_code.co_filename): return
 
@@ -44,7 +43,9 @@ def trace():
         "args":str(args)
       }
       saveSurgeFile()
-      return show_trace
+    except Exception as e:
+      print(e)
+    return show_trace
   
 
   import sys
