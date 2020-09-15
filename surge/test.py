@@ -29,5 +29,6 @@ b = testClassB("1")
 a.get(2)
 b.get("2")
 testFunction("57")
+print("asklj")
 # import pprint
 # pprint.PrettyPrinter(indent=2).pprint(globals())#locals()))

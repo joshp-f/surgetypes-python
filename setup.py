@@ -6,7 +6,7 @@ import setuptools
 
 setuptools.setup(
     name="surgetypes", # Replace with your own username
-    version="0.0.5",
+    version="0.0.7",
     author="Joshua p-f",
     author_email="jporrittfraser@gmail.com",
     description="Automated type checking",

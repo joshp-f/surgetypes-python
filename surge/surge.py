@@ -3,7 +3,8 @@ import json
 import inspect
 import opcode
 import os, pathlib
-log = {}
+import collections
+log = collections.defaultdict(dict)
 # surge_file =  open('.surgetypes','w+')
 def saveSurgeFile():
   with open('.surgetypes','w+') as surge_file:
@@ -26,25 +27,33 @@ BLACKLIST = [
   '__package__',
   'surge'
 ]
+def safe_stringify(string):
+  try:
+    return str(string)
+  except Exception as e:
+    return ""
 # https://explog.in/notes/settrace.html
 def trace():
   def show_trace(frame, event, arg):
+    if event not in ["call","return"]: return
+    ACTION_ID = f"{frame.f_code.co_filename} {frame.f_code.co_firstlineno}"
     try:
-      if event != "call": return
-      if os.path.isabs(frame.f_code.co_filename): return
+      if event == "return":
+        log[ACTION_ID]["return"] = safe_stringify(arg)
+      elif event == "call":
+        if os.path.isabs(frame.f_code.co_filename): return
 
-      code = frame.f_code
-      args = {name:frame.f_locals.get(name) for name in code.co_varnames}
-      log[f"{code.co_filename} {code.co_firstlineno}" ] = {
+        args = {name:frame.f_locals.get(name) for name in frame.f_code.co_varnames}
+        log[ACTION_ID].update({
 
-        "file": code.co_filename,
-        "name": code.co_name,
-        "lineno": code.co_firstlineno,
-        "args":str(args)
-      }
+          "file": frame.f_code.co_filename,
+          "name": frame.f_code.co_name,
+          "lineno": frame.f_code.co_firstlineno,
+          "args":safe_stringify(args)
+        })
       saveSurgeFile()
     except Exception as e:
-      print(e)
+      print(f"SurgeError {e}")
     return show_trace
   
 
